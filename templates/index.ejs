@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./styless.css">
+</head>
+
+<body>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="text" name="ma_sp" placeholder="Ma San Pham">
+        <input type="text" name="ten_sp" placeholder="Ten San Pham">
+        <input type="submit" value="Them San Pham">
+    </form>
+    <table>
+        <tr>
+            <th>Mã Sản Phẩm</th>
+            <th>Tên Sản Phẩm</th>
+            <th></th>
+        </tr>
+        <% for (let i = 0; i < data.length; i++) { %>
+            <tr>
+                <td><%=data[i].ma_sp%></td>
+                <td><%=data[i].ten_sp%></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+
+</html>

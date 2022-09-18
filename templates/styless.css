@@ -1,0 +1,14 @@
+h1 {
+    color: red;
+} 
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+}
+
+input {
+    margin-top: 10px;
+}
