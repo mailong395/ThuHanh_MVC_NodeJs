@@ -6,24 +6,36 @@
 </head>
 
 <body>
-    <form action="/" method="POST" enctype="multipart/form-data">
-        <input type="text" name="ma_sp" placeholder="Ma San Pham">
-        <input type="text" name="ten_sp" placeholder="Ten San Pham">
-        <input type="submit" value="Them San Pham">
-    </form>
-    <table>
-        <tr>
-            <th>Mã Sản Phẩm</th>
-            <th>Tên Sản Phẩm</th>
-            <th></th>
-        </tr>
-        <% for (let i = 0; i < data.length; i++) { %>
-            <tr>
-                <td><%=data[i].ma_sp%></td>
-                <td><%=data[i].ten_sp%></td>
-            </tr>
-        <% } %>
-    </table>
+    <div class="content">
+        <form id="create" method="POST" action="/" enctype="multipart/form-data">
+            <input type="number" name="ma_sp" placeholder="ID Sản Phẩm" />
+            <input type="text" name="ten_sp" placeholder="Tên Sản Phẩm" />
+            <input type="number" name="so_luong" placeholder="Số Lượng Sản Phẩm" />
+            <input type="submit" value="Submit" />
+        </form>
+        <form id="delete" method="POST" action="/delete" enctype="multipart/form-data">
+            <div class="title">
+                <h5>Danh sách sản phẩm</h5>
+                <input type="submit" value="Xoa" />
+            </div>
+            <table border="1">
+                <tr>
+                    <th>Mã Sản Phẩm</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Số Lượng</th>
+                    <th>Chọn</th>
+                </tr>
+                <% for (let i = 0; i < sanPhams.length; i++) { %>
+                    <tr>
+                        <td><%=sanPhams[i].ma_sp%></td>
+                        <td><%=sanPhams[i].ten_sp%></td>
+                        <td><%=sanPhams[i].so_luong%></td>
+                        <td><input type="checkbox" name="<%=sanPhams[i].ma_sp%>" /></td>
+                    </tr>
+                <% } %>
+            </table>
+        </form>
+    </div>
 </body>
 
 </html>

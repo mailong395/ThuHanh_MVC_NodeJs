@@ -1,10 +1,28 @@
 {
   "dependencies": {
+    "aws-sdk": "^2.1219.0",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20"
   },
   "scripts": {
-    "start": "node server.js"
-  }
+    "start": "nodemon server.js"
+  },
+  "name": "thuhanh_mvc_nodejs",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mailong395/ThuHanh_MVC_NodeJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mailong395/ThuHanh_MVC_NodeJs/issues"
+  },
+  "homepage": "https://github.com/mailong395/ThuHanh_MVC_NodeJs#readme",
+  "description": ""
 }

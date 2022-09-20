@@ -1,14 +1,31 @@
-h1 {
-    color: red;
-} 
-form {
+body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    margin-top: 150px;
 }
 
-input {
-    margin-top: 10px;
+.content {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+table {
+    margin-top: 16px;
+    width: 100%;
+}
+
+th {
+    background-color: gray;
 }
